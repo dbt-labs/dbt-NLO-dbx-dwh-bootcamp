@@ -7,3 +7,45 @@ models:
         tests:
           - accepted_values:
               values: ['discounted','not_discounted']
+  - name: customer_silver
+    columns:
+      - name: C_CUSTKEY
+        data_tests:
+          - unique
+          - not_null
+      - name: C_NAME
+        data_tests:
+          - not_null
+      - name: C_NATIONKEY
+        data_tests:
+          - not_null
+      - name: C_ACCTBAL
+        data_tests:
+          - not_null
+  - name: lineitem_silver
+    columns:
+      - name: L_ORDERKEY
+        data_tests:
+          - not_null
+      - name: L_LINENUMBER
+        data_tests:
+          - not_null
+      - name: L_QUANTITY
+        data_tests:
+          - not_null
+      - name: L_EXTENDEDPRICE
+        data_tests:
+          - not_null
+      - name: L_DISCOUNT
+        data_tests:
+          - not_null
+      - name: L_TAX
+        data_tests:
+          - not_null
+      - name: L_RETURNFLAG
+        data_tests:
+          - not_null
+      - name: L_LINESTATUS
+        data_tests:
+          - not_null
+
